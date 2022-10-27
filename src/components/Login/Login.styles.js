@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 `;
 
@@ -20,7 +20,7 @@ export const Rectangle = styled.div`
   width: 38px;
   height: 30px;
   position: fixed;
-  top: 335px;
+  top: 325px;
 `;
 
 export const Form = styled.div`
@@ -34,9 +34,6 @@ export const Input = styled.input`
   padding: 14px 20px;
   width: 332px;
   border: none;
-  ::placeholder {
-    color: black;
-  }
 `;
 
 export const Button = styled.div`
@@ -51,4 +48,11 @@ export const Button = styled.div`
   box-shadow: 0px 5px 3px 0px rgba(0, 0, 0, 0.15);
   user-select: none;
   cursor: pointer;
+`;
+
+export const ShowPass = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 `;

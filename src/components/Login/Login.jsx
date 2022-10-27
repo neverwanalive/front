@@ -7,11 +7,17 @@ import {
   Form,
   Input,
   Button,
+  ShowPass,
 } from "./Login.styles";
 
 export const Login = () => {
-  const allert = () => {
+  const getJson = () => {
     alert(`email: ${formik.values.email}\npassword: ${formik.values.password}`);
+  };
+
+  const toggleVisability = () => {
+    let temp = document.getElementById("password");
+    temp.type === "password" ? (temp.type = "text") : (temp.type = "password");
   };
 
   const formik = useFormik({
@@ -30,20 +36,25 @@ export const Login = () => {
         <Input
           id="email"
           name="email"
+          type="email"
           placeholder="email"
           onChange={formik.handleChange}
           value={formik.values.username}
         />
-
         <Input
           id="password"
+          type="password"
           name="password"
           placeholder="password"
           onChange={formik.handleChange}
           value={formik.values.password}
         />
       </Form>
-      <Button onClick={allert}>Login</Button>
+      <ShowPass>
+        <input type="checkbox" onClick={toggleVisability} />
+        <div>Show password</div>
+      </ShowPass>
+      <Button onClick={getJson}>Login</Button>
     </Container>
   );
 };
