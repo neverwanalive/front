@@ -1,12 +1,5 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
-`;
-
 export const Logo = styled.div`
   margin-bottom: 15px;
   height: 135px;
@@ -21,6 +14,13 @@ export const Rectangle = styled.div`
   height: 30px;
   position: fixed;
   top: 325px;
+`;
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const Form = styled.div`

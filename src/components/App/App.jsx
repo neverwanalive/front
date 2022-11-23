@@ -1,11 +1,18 @@
 import React from "react";
-import { Login } from "../Login";
-import { Container } from "./App.styles";
+import { Outlet } from 'react-router-dom';
+import { Main, Button, ButtonContainer, Container } from "./App.styles";
 
 export const App = () => {
   return (
-    <Container>
-      <Login />
-    </Container>
+    <Main>
+      <ButtonContainer>
+        <Button to="/">Home</Button>
+        <Button to="login">Login</Button>
+        <Button to="register">Registration</Button>
+      </ButtonContainer>
+      <Container>
+        <Outlet/>
+      </Container>
+    </Main>
   );
 };

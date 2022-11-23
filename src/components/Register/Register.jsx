@@ -1,9 +1,9 @@
 import React from "react";
 import { Formpage } from "../Formpage";
 
-export const Login = () => {
+export const Register = () => {
 
   return (
-    <Formpage text={'Login'}></Formpage>
+    <Formpage text={'Register'}></Formpage>
   );
 };
